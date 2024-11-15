@@ -2,14 +2,16 @@ import React from "react";
 
 function Menu(){
     return(
-        <div class="menu flex space-between align-center">
-        <div class="options flex p-2">
-            <button class="p-05 btns" id="income">Income</button>
-            <button class="p-05 btns" id="expense">Expenses</button>
+        <div className="menu flex space-between align-center">
+        <div className="options flex p-2">
+            <button className="p-05 btns" id="income">Income</button>
+            <button className="p-05 btns" id="expense">Expenses</button>
         </div>
-        <div class="filter">
-            <i class="filter fas fa-sliders-h m-2"></i>
+        <div className="filter">
+            <i className="filter fas fa-sliders-h m-2"></i>
         </div>
      </div>
     )
 }
+
+export default Menu;
