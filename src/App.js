@@ -1,11 +1,8 @@
-import './App.css';
+import Navbar from "./components/Navbar";
 
 function App(){
   return (
-    <div>
-      <h1>Hello</h1>
-      <p> This is my first react</p>
-    </div>
+    <Navbar/ >
   );
 }
 
