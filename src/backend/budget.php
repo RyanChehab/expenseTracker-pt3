@@ -1,9 +1,9 @@
 <?php
-session_start();
+
 include "connection.php";
 
 if($_SERVER['REQUEST_METHOD']=="POST"){
-    $user_id = $_SESSION['user_id'];
+    $user_id = 3;
     
     $incomequery="SELECT sum(amount) as total_income FROM transactions WHERE user_id=? AND type = 'income'";
 

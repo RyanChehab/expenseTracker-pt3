@@ -1,10 +1,10 @@
 <?php
-session_start();
+
 include 'connection.php';
 
 if($_SERVER["REQUEST_METHOD"]== "POST") {
 
-    $user_id = $_SESSION['user_id'];
+    $user_id =3;
 
     $data = json_decode(file_get_contents("php://input"));
     if($data){ 

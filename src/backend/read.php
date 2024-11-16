@@ -1,9 +1,9 @@
 <?php
 session_start();
 include 'connection.php';
-$user_id=$_SESSION['user_id'];
+$user_id=3;
 
-if ($_SERVER["REQUEST_METHOD"]=="POST"){
+// if ($_SERVER["REQUEST_METHOD"]=="POST"){
     $sql="SELECT * FROM transactions where user_id = ?";
     
     $stmt = $connection->prepare($sql);
@@ -20,7 +20,7 @@ if ($_SERVER["REQUEST_METHOD"]=="POST"){
         $transactions[] = $row;
     }   
     echo json_encode($transactions);
-} else{
-    $response = ["message" => "Empty result"];
-    echo json_encode($response);
-}
+// } else{
+//     $response = ["message" => "No transactions"];
+//     echo json_encode($response);
+// }
