@@ -7,14 +7,17 @@ function Menu(){
     const [showExpenseSheet, setShowExpenseSheet] = useState(false);
 
     const handleIncome = () => {
-        setShowIncomeSheet((show) => !show)
+        setShowIncomeSheet((show)=>!show)
+        setShowExpenseSheet(false)
     }
 
     const handleExpense = () =>{
-        setShowExpenseSheet((show)=> !show)
+        setShowExpenseSheet((show)=>!show)
+        setShowIncomeSheet(false)
     }
     return(
     <>
+
     <div className="menu flex space-between align-center">
         <div className="options flex p-2">
             <button className="p-05 btns" id="income" onClick={handleIncome}>Income</button>
