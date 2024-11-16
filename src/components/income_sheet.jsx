@@ -31,11 +31,25 @@ function Income_sheet(){
 
     const { type, amount, date, notes } = incomeData[0]
 
-    return(
-    <div>
-        <p>{amount}</p>
-    </div>
-    )
+    return (
+        <div>
+            {incomeData.length > 0 ? (
+                incomeData.map(({ id, type, amount, date, notes }) => (
+                    <div key={id} className={`transForm-${type}`}>
+                        <div className="flex space-between m-1">
+                            <p>{type}</p>
+                            <i className="delete fas fa-minus" title="Delete transaction"></i>
+                        </div>
+                        <hr />
+                        <p>Amount: {amount}</p>
+                        <p>Date: {date}</p>
+                        <p>Description: {notes}</p>
+                    </div>
+                ))
+            ) : (
+                <p>No transactions found.</p>
+            )}
+        </div>
+    );
 }
-
 export default Income_sheet;
