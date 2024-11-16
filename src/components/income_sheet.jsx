@@ -29,12 +29,13 @@ function Income_sheet(){
         return <p>Loading...</p>;
     }
 
-    const { type, amount, date, notes } = incomeData[0]
-
     return (
         <div>
+        <button className="add-income" id="add-income">Add Income</button>
+        
             {incomeData.length > 0 ? (
-                incomeData.map(({ id, type, amount, date, notes }) => (
+                incomeData.filter(({type}) => type === "income")
+                .map(({ id, type, amount, date, notes }) => (
                     <div key={id} className={`transForm-${type}`}>
                         <div className="flex space-between m-1">
                             <p>{type}</p>
