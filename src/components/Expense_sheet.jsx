@@ -29,6 +29,7 @@ function Expense_sheet(){
 
     return (
         <div>
+            <button className="add-expense" id="add-expense">Add Expense</button>
             {expenseData.length > 0 ? (
                 expenseData.filter(({type}) => type === "expense")
                 .map(({ id, type, amount, date, notes }) => (
